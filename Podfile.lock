@@ -1,0 +1,20 @@
+PODS:
+  - THLabel (1.4.10)
+  - TouchVisualizer (4.0.0)
+
+DEPENDENCIES:
+  - THLabel (~> 1.4.0)
+  - TouchVisualizer (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - THLabel
+    - TouchVisualizer
+
+SPEC CHECKSUMS:
+  THLabel: 3fc93a0f01f74e4eec7574df2819e576d57150b3
+  TouchVisualizer: d342dc3a567b6dd289bc31b7ce8681302a93dfee
+
+PODFILE CHECKSUM: 62caff6fb18bd2b9e3c2d3c9a9c6d79533d38091
+
+COCOAPODS: 1.10.1
