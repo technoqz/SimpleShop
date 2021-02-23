@@ -12,7 +12,7 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.shouldRemoveShadow(true) 
+        self.navigationController?.transparentNavigationBar()
         
         Categories.getCategories{ categories, error in
             

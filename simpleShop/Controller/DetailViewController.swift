@@ -51,8 +51,8 @@ class DetailViewController: UIViewController, CustomNavBarDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         customNavBar?.updateBadge(animated: false)
+        self.navigationController?.normalNavigationBar()
     }
     
     @IBAction func addCartPressed(_ sender: UIButton) {

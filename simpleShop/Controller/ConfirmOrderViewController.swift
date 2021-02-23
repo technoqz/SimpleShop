@@ -52,6 +52,10 @@ class ConfirmOrderViewController: UIViewController  {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.transparentNavigationBar()
+    }
+    
     // on confirm -> go to Main
     @IBAction func confirmPressed(_ sender: UIButton) {
         Cart.clearCart()
@@ -75,9 +79,7 @@ extension ConfirmOrderViewController{
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            
             // if keyboard size is not available for some reason, dont do anything
             return
         }
@@ -163,5 +165,6 @@ extension ConfirmOrderViewController: UITextViewDelegate, UITextFieldDelegate {
 extension ConfirmOrderViewController: MapViewControllerDelegate{
     func fillAdress(address: String) {
         addressTextView.text = address
+        validateFields()
     }
 }
